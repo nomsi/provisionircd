@@ -1,0 +1,356 @@
+For more information visit http://provisionircd.no-ip.org.
+
+
+Info:
+(-) = Removed, (+) = Added/Feature, (&) = Fixed, (*) = Other improvement
+
+
+[Version: 2.1, release date: 15-07-2015]
+
+[15-02-2015] (*) Minor proxy checker adjustments.
+[15-02-2015] (*) /WHOIS numeric 312 bug fixed.
+[15-02-2015] (&) /MODE bug fixed which displayed the "missing @" message multiple times. (thanks to westor)
+[15-02-2015] (+) Root users can now view the /WHOIS of users matching +w.
+[15-02-2015] (*) ircd.conf max topic length check fixed. Had an incorrect value. (thanks to westor)
+[15-02-2015] (&) Fixed some major bugs in (un)setting snomasks. (thanks to westor)
+[16-02-2015] (*) /RESTART command improved.
+[16-02-2015] (+) Added conf::quitprefix option to set a quit prefix.
+[16-02-2015] (*) Flood protection drastically improved.
+[16-02-2015] (*) /MODE command improved to check for non-existing users/channels. (thanks to westor)
+[16-02-2015] (+) Oper status with +H can now be seen by other operators. (thanks to westor)
+[16-02-2015] (*) Usermode +S now working properly.
+[16-02-2015] (+) Channelmode +C added: blocks CTCPs in the channel.
+[17-02-2015] (+) Maximum channels per user is now set to 20.
+[17-02-2015] (+) Added operflag +u. Permission to use /UPDATE command.
+                 Also requires usermodes +X, +T and +Z.
+[17-02-2015] (*) /UPDATE command improved and flood protection added.
+[17-02-2015] (*) Channelmode +f improved and fixed.
+[17-02-2015] (+) /QUIT command anti-spam added.
+[17-02-2015] (*) /KLINE, /ZLINE, /SHUN and /ELINE masks detection improved.
+[18-02-2015] (&) /SETIDENT command fixed.
+[18-02-2015] (*) Improved /NAMES: only shows output if on the channel.
+[18-02-2015] (*) /JUMP command improved. With settings::versioncheck enables, it will check if user is using mIRC.
+[19-02-2015] (&) Fixed serious AQ_IP bug that caused missing chanprefixes.
+[19-02-2015] (&) Fixed /LOGIN invalid password attempt count.
+[27-02-2015] (+) IRC admins can now see stealthed joins and parts.
+[27-02-2015] (*) Changed stealth prefix to * due to ident conflicts.
+[27-02-2015] (+) Added possible DCC exploit detection.
+[27-02-2015] (&) Fixed serious mSL injection bug in /KILL command.
+[28-02-2015] (*) Channelmode +V now working as intended.
+[28-02-2015] (*) Changing of hostmask and ident now checks for invalid characters.
+[01-03-2015] (&) Conf settings::modesonjoin is now working.
+[01-03-2015] (*) Database files changed to binary.
+[02-03-2015] (&) Fixed bug in cloakhost for unresolvable hostnames.
+[02-03-2015] (*) Some minor code improvements and typo's fixed.
+[02-03-2015] (&) Fixed missing prefixes for users on access list of a channel. (thanks to westor)
+[03-03-2015] (&) Fixed /MODE prefix bugs with + and - getting mixed up. (thanks to westor)
+[04-03-2015] (*) Improved the way hostmasks are handled.
+[04-03-2015] (*) Cloaks cache is now emptied when the IRCd closes.
+[04-03-2015] (*) /TRACE command now shows more info, like client location.
+[09-03-2015] (*) Opers can only give themselves usermodes matching their operblock.
+[11-03-2015] (*) Added user IP in /WHOWAS list. (thanks to westor)
+[11-03-2015] (*) Improved hash cleaning on client disconnect.
+[12-03-2015] (&) Major bug fixed - Forgot to give credits to westor. (thanks to westor)
+[15-03-2015] (*) Improved update system. Now re-sends versionheaders to all online users upon successful update.
+[17-03-2015] (*) Improved /WHO command.
+[25-03-2015] (&) Fixed bug with Enforcer not being correctly registered.
+[25-03-2015] (&) Fixed DNS resolve issue with multiple connections at once.
+[25-03-2015] (*) Protected our Enforcer friend from being killed.
+[17-04-2015] (*) Improved chmode +k and +l handlings.
+[17-04-2015] (&) Fixed IDENT response upon connect. Valid IDENTs are prefixed with a ~.
+[22-04-2015] (+) Channelmode +q re-added.
+[04-06-2015] (&) +q conflict between chmode with and without parameter fixed. (thanks to Kaj)4
+[04-06-2015] (&) Bug fixed in /HELPOP CHANGES - removed the '4' after Kaj's name.
+[07-06-2015] (&) Fixed /SANICK illegal characters bypass.
+[01-07-2015] (&) Fixed missing hosts on some situations.
+[01-07-2015] (&) Fixed incorrect RecvQ error value.
+[02-07-2015] (&) Fixed QUITPREFIX not showing correctly.
+[06-07-2015] (*) Some /REHASH bugs fixed.
+[09-07-2015] (&) Fixed stealthed QUITs.
+[09-07-2015] (&) Enforcer should now really work correctly, I hope...
+[15-07-2015] (*) Some minor docs updates.
+
+
+
+[Version: 2.0.5 Quick Update 10, release date: 14-02-2015]
+
+[03-12-2014] (+) Few extra ports added for proxy scanning.
+[03-12-2014] (&) /MODE bug fixed with +e not showing when set.
+[04-12-2014] (+) /VKICK command added. Votekick system. (thanks to Mark Wiering)
+[05-12-2014] (&) Channel mode +m can now be overriden by IRC operators. (thanks to DanciingQueen_)
+[05-12-2014] (&) Major /MODE bugs fixed which caused users to set modes on users that are
+                 not in channel. (also indirectly thanks to DanciingQueen_)
+[12-12-2014] (+) LightIRC not supported. (thanks to Stanley)
+[09-02-2015] (&) Internal part/join handler greatly improved.
+[12-02-2015] (&) Another major /MODE bug fixed which allowed all users to set channel modes
+                 on a channel on which they have no status. Unbelievable, after all those years...
+[13-02-2015] (*) Some minor /QUIT bug fixed which didn't close empty channels.
+[14-02-2015] (&) /SHUN bug fixed. Should work properly now.
+[14-02-2015] (*) Expiration checks improved and idle timers removed.
+
+
+[Version: 2.0.5 Quick Update 9]
+
+[20-01-2013] (&) Opers can no longer set +H to a normal user.
+[20-01-2013] (*) Giving/taking snomasks to a user is now displayed for that user.
+[20-01-2013] (+) LAGCHK now working. (thanks to Platzii)
+[20-01-2013] (*) Some minor typo's fixed.
+[20-01-2013] (&) Small issue with quitprefix fixed.
+[20-01-2013] (*) Minor /KILL command issues fixed.
+[21-01-2013] (*) /NAMES command slightly improved.
+[21-01-2013] (&) Major invisible bug fixed that caused a channel to be closed.
+                 while being occupied by an invisible administrator.
+[21-01-2013] (&) Fixed /LIST count when using invisibility.
+[21-01-2013] (*) /STATS C showing more information.
+[21-01-2013] (&) Major /UPDATE bug fixed. Can now only be used by technical administrators
+                 or above. Update has been improved and fixed.
+[21-01-2013] (&) /SETHOST and /SETIDENT is now permitted to IRCops only.
+[21-01-2013] (&) /CHGIDENT bug fixed where server does not correctly save new ident.
+[21-01-2013] (&) Usermode "I" now fully working.
+[21-01-2013] (&) Channelmode "q" fixed and fully working.
+[21-01-2013] (*) Minor code cleanings and improvements.
+
+
+
+
+[Version: 2.0.5 Quick Update 8]
+
+[28-07-2009] (+) /chanset modelock option added. (thanks to Platzii)
+[30-07-2009] (*) /INVISIBLE command improved.
+[30-07-2009] (&) Some /kline and /zline bugs fixed while matching an except
+[31-07-2009] (+) Added support for username and channel bans. Example:
+                 ~R:username <- bans username from channel (if logged in)
+                 ~C:#banchan <- bans user from the channel if on #banchan
+[01-08-2009] (*) On login, you get automatic level on all channels which
+                 you have access on.
+[01-08-2009] (*) When adding a mask to the akick list, all matched users
+                 will get banned and kicked off the channel.
+[01-08-2009] (+) /CHANOP command added. Gives channel status if needed.
+[01-08-2009] (+) Usermode 't' added for opers.conf; User gets oper host.
+[01-08-2009] (*) Other minor bugs fixed, and some code cleaning.
+[02-08-2009] (*) Some /mode command improvements.
+[02-08-2009] (*) Some /invisible command improvements.
+[02-08-2009] (&) Local /names variable bugs fixed.
+[02-08-2009] (&) /info command improved, also some bug fixes, like quitmsg.
+[03-08-2009] (+) /UNBAN command added. Unbans you from channel if access.
+[03-08-2009] (+) Conf settings::loginhost added: receive a static hostname
+                 based on the username and server name upon login.
+[04-08-2009] (+) Channelmode +q added: make quits appear like /part and hides the message.
+[04-08-2009] (+) Channelmode +Q added: /kick command is not allowed on channel.
+[05-08-2009] (*) Conf settings::fastconnect added.
+                 Skip unnecessary connection procedures.
+[05-08-2009] (*) Setting/removing snomasks bug fixed.
+[05-08-2009] (+) /CHANKILL command added, supporting parameters o, i and n.
+                 Parameter -o excepts all channel ops for the chankill,
+                 and with -n you can give one or more nicks to be excepted.
+                 -i looks for an IP match on the given channel. -n and -i can
+                 never be used at the same time.
+[06-08-2009] (-) Removed some usermodes and snomasks.
+                 Modes: 'O' and 'N'. Because it will always be local.
+                 Snomask: 'g', same as above.
+[16/17-08-09](+) Added chmode +a: Blocks /amsg's on channel.
+[27-08-2009] (*) Voiced users are now able to remove their voice status.
+
+
+
+[Version: 2.0.5 Quick Update 7]
+
+[26-05-2009] (&) Some /whois raw numerics fixed.
+[27-05-2009] (&) Fixed some other +l bug. (the limit wasn't saved)
+[28-05-2009] (&) Mode-bypass bug fixed when joining multiple channels
+[29-05-2009] (*) /WHO command improved.
+[29-05-2009] (&) Connection registration will now work correctly.
+[30-05-2009] (&) Some serious cloning bug fixed. (thanks to DutchPrm0)
+[30-05-2009] (&) Fixed /wallops bug. Need usermode +l, _NOT_ +w.
+[01-06-2009] (&) Major /sanick bug fixed which allowed opers to change
+                 nicknames while the nicks are already in use. (thanks to DutchPrm0)
+[01-06-2009] (&) /CLONES command fixed.
+[01-06-2009] (&) Some /mode improvements. Max 6 modes per line.
+
+
+
+[Version: 2.0.5 Quick Update 6]
+
+[27-03-2009] (&) Serious chmode +l bug fixed.
+[27-03-2009] (*) Whois notice when whoising yourself has been removed.
+[27-03-2009] (&) /kick bug when oflag +v set has been fixed.
+[28-03-2009] (*) Some connection improvements.
+[28-03-2009] (&) Fixed some proxychecker bugs.
+[29-03-2009] (+) Added /swhois command.
+[29-03-2009] (&) Fixed /chgident command.
+[31-03-2009] (&) Fixed bug when joining more channels with 1 /join.
+[31-03-2009] (&) /mode bug fixed when having chmodes +kl.
+
+
+
+[Version: 2.0.5, release date: 08-08-08]
+
+[26-09-07] (*) No more double server notices when using sajoin or sapart
+[06-08-08] (&) Major bug in /JOIN fixed.
+[07-08-08] (*) Some other improvements.
+
+
+
+[Version: 2.0.4, release date: 27-12-06]
+
+[24-11-06] (&) Bug fixed which caused usermode 'i' to shown multiple times
+               after oper up.
+[24-11-06] (&) Major - In previous version when MOTD file was missing, the
+               IRCd was skipping the rest of the connection procedure.
+[26-11-06] (*) Proxy checker greatly improved. Proxies will be checked at
+               ports: 808, 1080, 3128, 3380, 4655, 5517, 6588, 7095, 7336, 7621, 8080 and 8744.
+[26-11-06] (*) /VAR .%404 completely removed.
+[27-11-06] (*) /JOIN command improved, and some unnecessary data removed.
+[27-11-06] (*) Commands REHASH, WHOIS, WHOWAS, IRCOPS, LIST and MOTD hidden from snomask 'S'
+[27-11-06] (*) Halfops (%) can now use /KICK and /MODE commands. Also, protection levels
+               for +aq (protection, owner) has been added (finally, lol)
+[28-11-06] (&) /INVISIBLE bug fixed. Now also available on channels containing char. '-'
+[28-11-06] (&) Another /QUIT bug fixed which caused quit messages not to be displayed
+               when user was on (after quit) empty channel.
+[29-11-06] (+) /JUMP command added.
+[29-11-06] (*) Oper levels now works with oper flags.
+[29-11-06] (*) Operflags and oper login now shown in /WHOIS to other IRCops.
+[30-11-06] (*) /PRIVMSG and /NOTICE command improved. These commands now supports
+               mIRC commands /ame and /amsg (channel separating)
+[03-11-06] (*) Users can now change their own nickname when it's equal to the current
+               nickname. Example: [02:55:17] * sirius is now known as Sirius
+[03-11-06] (&) Minor cloaking bug fixed.
+[03-11-06] (&) Some other important /MODE and /KICK bugs fixed.
+[07-11-06] (+) 2 new conf::settings added: 'aq_prefix and' 'idwithrealhost'
+[08-11-06] (+) Channel type '+' added.
+[08-11-06] (*) Some minor registration improvements.
+[24-12-06] (*) /WHO command improved.
+
+
+
+[Version: 2.0.3, release date: 24-11-06]
+
+[12-11-06] (&) Some mask bugs fixed.
+[12-11-06] (+) /SETHOST command added.
+[12-11-06] (+) Channel and user mode +S added: strip mIRC colors in messages and notices,
+[13-11-06] (+) Commands /NS, /NICKSERV, /CS, /CHANSERV, /ADDOPER, /DELOPER, /AWAY,
+               /NAMES and /KICK hidden from users matching snomask 'S' (was quite annoying ;p)
+[18-11-06] (+) IRCD now supports /MODE NickName +/-modes when IRCop and got usermode 'v'
+[19-11-06] (+) Simple and fast proxy scanner added (bad scanner, but better than nuttin').
+[21-11-06] (&) /DELOPER usages now shown correct.
+[21-11-06] (&) Bug on setting and removing snomasks has been fixed.
+[21-11-06] (&) Bug on retrieving snomask 'a' on oper up fixed.
+[21-11-06] (&) Minor /KILL bug fixed.
+[22-11-06] (*) /CLIENT command improved (for Enforcer).
+[22-11-06] (*) /SAPART command improved.
+[22-11-06] (+) /IRCDHELP CHANGES section added (lists Changes.txt)
+[22-11-06] (&) Some IRCop modes bugs fixed, mostly with usermode 'O'.
+[22-11-06] (&) Bug in /IRCOPS command fixed while LocOp.
+[22-11-06] (+) Snomask 'A' added; See aleatory connections.
+[22-11-06] (+) Conf option 'blockalea' added; block aleatory connections.
+[23-11-06] (&) Some bugs fixed on starting up and /REHASH'ing.
+
+
+
+[Version: 2.0.2, release date: 11-11-06] - Several new features added
+
+[29-10-06] (&) Bug on removing snomasks and setting snomask +i fixed.
+[29-10-06] (+) Characters ^, `, and \ allowed in nicknames.
+[30-10-06] (+) Set option "settings::modesonjoin" added.
+               Set modes which will be added when you create a channel.
+[30-10-06] (+) Set option "settings::maxperip" added. Set allowed cloning limit.
+[01-11-06] (&) Channelmode 'l' not correctly shown in /MODE.
+[01-11-06] (+) Topics will now be saved in topics.db.
+[01-11-06] (*) Some remote bugs fixed, which made ProvisionIRCd more stable.
+[01-11-06] (*) Cloaking system changed.
+[02-11-06] (-) docs.html removed.
+[03-11-06] (+) Lists can now hold a limit of 100 entries. (MAXLIST=b:100,e:100,I:100).
+[03-11-06] (*) /MODE +/-b command greatly improved.
+[04-11-06] (+) IRCd supports 15 modes on each line.
+[04-11-06] (&) Bug on removing chanops (+o) while owner (+q), returned @ prefix iso * prefix.
+[04-11-06] (+) Channel usermode +O added; Can use override and will be protected.
+               on the channel (Only settable by IRCops).
+[04-11-06] (+) IRCd now supports /partall (from mIRC).
+[05-11-06] (&) Major connect bug fixed.
+[05-11-06] (*) /KLINE command improved.
+[05-11-06] (+) /Stats 'k' improved and now shows how long a Kill:line is active.
+[05-11-06] (&) Bug fixed with channel status; didn't remove when you got kicked.
+[06-11-06] (+) Modes, bans, and topic on registered channels won't be removed when channel is empty.
+[06-11-06] (*) Data files put in "\data"
+[06-11-06] (+) Channel modes +p (no-one can join), +s (channel is secret), and +R (must be logged in) added.
+               Also channelmodes +e <nick!ident@host> and +I <nick!ident@host> have been added.
+[06-11-06] (*) /CLONES and /WHO command improved.
+[07-11-06] (*) Klines and sqlines will be saved in database.
+[07-11-06] (+) /Stats +q added: view Q:Line list.
+[07-11-06] (*) /IRCDHELP command updated.
+[07-11-06] (*) Commands KLINE, LUSERS and WHOIS hidden from snomask +S.
+[07-11-06] (+) Snomask +a added: view /SA* command usages.
+[07-11-06] (*) /SA* commands improved and some bugs fixes.
+[08-11-06] (+) Channel mode +f added; Set flood protection in your channel.
+               Syntax: +f amount:type:secs
+               For example: +f 3:m:5 blocks channel messages for 5 when it reaches his
+               limit of 3 messages in 5 seconds.
+               Types can be: m = messages, N = notices, n = nickchanges, j = joins.
+               To remove a type, use /MODE #Yourchan -f <type>
+[09-11-06] (&) Minor bug fixed which caused nickchanges shown twice on channels
+               and quits in status window.
+[10-11-06] (*) DNS cache added to improve connections.
+
+
+
+[Version: 2.0.1, release date: 29-10-06] - Only bug fixes this time ...
+
+[28-10-06] (&) Kline database bug fixed.
+[28-10-06] (&) On kick bug fixed. When last user got kicked, channel stayed open.
+[28-10-06] (&) Ident bug on /USER fixed.
+[29-10-06] (&) Major /KICK bug fixed.
+[29-10-06] (&) Ident bug fixed.
+[29-10-06] (&) Hash-table NICKS will now successfully be created.
+
+
+
+[Version: 2.0.0, release date: 27-10-06] - * Major update *
+
+[14-10-06] (&) Global user record count bug fixed.
+[14-10-06] (&) Annoying $input bug fixed which hold users back to connect.
+[14-10-06] (&) /SAJOIN and /SAPART commands weren't fully working after all.
+               Now they do, believe me. ._.
+[15-10-06] (+) /SETNAME command added.
+[15-10-06] (&) Another /MODE bug fixed. Opermodes can now successfully be removed.
+[15-10-06] (&) Snomasks bug fixed.
+[15-10-06] (+) Snomask 'F' added; can view spamfilter matches.
+[15-10-06] (*) Parameters from /MODE now set from hash-tables.
+[15-10-06] (*) /LOGIN and /REGISTER usages hidden from users matching snomask 'S'.
+[15-10-06] (&) Major bug fixed in oper up matching usermode 'T'.
+[15-10-06] (&) In previous version, /MODE commands without parameters were ignored.
+               This problem is now solved.
+[15-10-06] (+) /KILL protection added. Opers cannot be killed from the server by
+               an oper matching the same level, or higher level.
+[16-10-06] (*) /MODE command greatly improved. It does now support multi modes on 1 line.
+[16-10-06] (&) /TOPIC bug fixed.
+[16-10-06] (&) Channelmode 'N' bug fixed.
+[16-10-06] (+) Snomasks now shown in /WHOIS.
+[17-10-06] (+) /INVISIBLE command added. To be invisible on a channel.
+[17-10-06] (+) Snomask 'I' added; can view /invisible usages.
+[17-10-06] (&) Bug on removing opermodes fixed. In previous version, opermodes
+               shown twice.
+[17-10-06] (+) When getting @ on the helpchannel, user automaticly gets umode 'h'.
+[17-10-06] (+) Usermode 'v' added; can go trough channelmodes +ilkb, and can override
+               with commands /MODE, /KICK, /TOPIC and /INVITE. (IRCops only)
+[17-10-06] (*) Stats 'i' changed to 'S'. (IRCd stats)
+[17-10-06] (*) /IRCDHELP command updated.
+[18-10-06] (+) Usermode 'I' added; see when people doing an /INFO on you.
+[22-10-06] (*) Mode prefix on channels shown in /WHOIS.
+
+
+
+[Version: 1.0.1 (quick update), release date: 13-10-06]
+
+[03-10-06] (*) Version data updated.
+[03-10-06] (+) /DIE command added.
+[03-10-06] (&) /RESTART bug fixed.
+[03-10-06] (&) Seriously /OPER bug fixed. In previous version, only opers matching
+               umode 'X' were added to the Opers Hash-table.
+[12-10-06] (&) Few little bugs fixed.
+[12-10-06] (&) DOCS and CHANGES bugs fixed. ;x
+[12-10-06] (&) /WHOIS bug fixed. Whois now shows services level. I temporary disabled
+               in debugging mode, forgotten to restore. lol
+[13-10-06] (&) /SAJOIN and /SAPART bugs fixed. They are now fully working.
+               Limited to Services admins.
+[13-10-06] (&) /MODE bug fixed. Modes and params variables weren't always reset.
+[13-10-06] (*) /TRACE and /CLONES command are now limited to IRC Operators.

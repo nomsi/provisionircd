@@ -1,0 +1,72 @@
+[Version: 2.1, release date: 15-07-2015]
+
+[15-02-2015] (*) Minor proxy checker adjustments.
+[15-02-2015] (*) /WHOIS numeric 312 bug fixed.
+[15-02-2015] (&) /MODE bug fixed which displayed the "missing @" message multiple times. (thanks to westor)
+[15-02-2015] (+) Root users can now view the /WHOIS of users matching +w.
+[15-02-2015] (*) ircd.conf max topic length check fixed. Had an incorrect value. (thanks to westor)
+[15-02-2015] (&) Fixed some major bugs in (un)setting snomasks. (thanks to westor)
+[16-02-2015] (*) /RESTART command improved.
+[16-02-2015] (+) Added conf::settings::quitprefix option to set a quit prefix.
+[16-02-2015] (*) Flood protection drastically improved.
+[16-02-2015] (*) /MODE command improved to check for non-existing users/channels. (thanks to westor)
+[16-02-2015] (+) Oper status with +H can now be seen by other operators. (thanks to westor)
+[16-02-2015] (*) Usermode +S now working properly.
+[16-02-2015] (+) Channelmode +C added: blocks CTCPs in the channel.
+[17-02-2015] (+) Maximum open channels per user is now set to 20.
+[17-02-2015] (+) Added operflag +u. Permission to use /UPDATE command.
+                 Also requires usermodes +X, +T and +Z.
+[17-02-2015] (*) /UPDATE command improved and flood protection added.
+[17-02-2015] (*) Channelmode +f improved and fixed.
+[17-02-2015] (+) /QUIT command anti-spam added.
+[17-02-2015] (*) /KLINE, /ZLINE, /SHUN and /ELINE masks detection improved.
+[18-02-2015] (&) /SETIDENT command fixed.
+[18-02-2015] (*) Improved /NAMES: only shows output if on the channel.
+[18-02-2015] (*) /JUMP command improved. With settings::versioncheck enables, it will check if user is using mIRC.
+[19-02-2015] (&) Fixed serious AQ_IP bug that caused missing chanprefixes.
+[19-02-2015] (&) Fixed /LOGIN invalid password attempt count.
+[27-02-2015] (+) IRC admins can now see stealthed joins and parts.
+[27-02-2015] (*) Changed stealth prefix to * due to ident conflicts.
+[27-02-2015] (+) Added possible DCC exploit detection.
+[27-02-2015] (&) Fixed serious mSL injection bug in /KILL command.
+[28-02-2015] (*) Channelmode +V now working as intended.
+[28-02-2015] (*) Changing of hostmask and ident now checks for invalid characters.
+[01-03-2015] (&) Conf settings::modesonjoin is now working.
+[01-03-2015] (*) Database files changed to binary.
+[02-03-2015] (&) Fixed bug in cloakhost for unresolvable hostnames.
+[02-03-2015] (*) Some minor code improvements and typo's fixed.
+[02-03-2015] (&) Fixed missing prefixes for users on access list of a channel. (thanks to westor)
+[03-03-2015] (&) Fixed /MODE prefix bugs with + and - getting mixed up. (thanks to westor)
+[04-03-2015] (*) Improved the way hostmasks are handled.
+[04-03-2015] (*) Cloaks cache is now emptied when the IRCd closes.
+[04-03-2015] (*) /TRACE command now shows more info, like client location.
+[09-03-2015] (*) Opers can only give themselves usermodes matching their operblock.
+[11-03-2015] (*) Added user IP in /WHOWAS list. (thanks to westor)
+[11-03-2015] (*) Improved hash cleaning on client disconnect.
+[12-03-2015] (&) Major bug fixed - Forgot to give credits to westor. (thanks to westor)
+[15-03-2015] (*) Improved update system. Now re-sends versionheaders to all online users upon successful update.
+[17-03-2015] (*) Improved /WHO command.
+[25-03-2015] (&) Fixed bug with Enforcer not being correctly registered.
+[25-03-2015] (&) Fixed DNS resolve issue with multiple connections at once.
+[25-03-2015] (*) Protected our Enforcer friend from being killed.
+[17-04-2015] (*) Improved chmode +k and +l handlings.
+[17-04-2015] (&) Fixed IDENT response upon connect. Valid IDENTs are prefixed with a ~.
+[22-04-2015] (+) Channelmode +q re-added.
+[04-06-2015] (&) +q conflict between chmode with and without parameter fixed. (thanks to Kaj)4
+[04-06-2015] (&) Bug fixed in /HELPOP CHANGES - removed the '4' after Kaj's name.
+[07-06-2015] (&) Fixed /SANICK illegal characters bypass.
+[01-07-2015] (&) Fixed missing hosts on some situations.
+[01-07-2015] (&) Fixed incorrect RecvQ error value.
+[02-07-2015] (&) Fixed QUITPREFIX not showing correctly.
+[06-07-2015] (*) Some /REHASH bugs fixed.
+[09-07-2015] (&) Fixed stealthed QUITs.
+[09-07-2015] (&) Enforcer should now really work correctly, I hope...
+[15-07-2015] (*) Some minor docs updates.
+
+
+For more information visit http://provisionircd.no-ip.org.
+
+
+Info:
+(-) = Removed, (+) = Added/Feature, (&) = Fixed, (*) = Other improvement
+
